@@ -13,6 +13,9 @@ keymap.set('n', '<leader>lts', '<cmd>Leet submit<Cr>', { desc = 'Submit the curr
 keymap.set('n', '<leader>lto', '<cmd>Leet open<Cr>', { desc = 'Open the current code in a page web' })
 keymap.set('n', '<leader>ltl', '<cmd>Leet list<Cr>', { desc = 'Present a list of the problems' })
 
+-- mapping for Neotree
+keymap.set('n', '<C-n>', '<cmd>Neotree toggle<Cr>', { desc = 'toggle the file manager NeoTree' })
+
 -- Mapping for True zen
 keymap.set('n', '<leader>zn', '<cmd>TZNarrow<CR>', { desc = 'Narrow view for True zen' })
 keymap.set('n', '<leader>zf', '<cmd>TZFocus<CR>', { desc = 'Focus view for Truezen' })
