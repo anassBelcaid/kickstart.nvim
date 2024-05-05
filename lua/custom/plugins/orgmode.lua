@@ -20,7 +20,7 @@ return {
         ensure_installed = { 'org' }, -- Or run :TSUpdate org
       },
       require('orgmode').setup {
-        org_agenda_files = { '~/Dropbox/org/*', '~/my-orgs/**/*', '~/feather/**/*' },
+        org_agenda_files = { '~/Dropbox/org/*', '~/my-orgs/**/*' },
         org_default_notes_file = '~/my-orgs/refile.org',
       },
 
