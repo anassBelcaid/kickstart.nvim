@@ -659,7 +659,10 @@ require('lazy').setup({
           {
             'rafamadriz/friendly-snippets',
             config = function()
-              require('luasnip.loaders.from_vscode').lazy_load()
+              -- require('luasnip.loaders.from_vscode').lazy_load()
+              -- load snippets from path/of/your/nvim/config/my-cool-snippets
+              require('luasnip.loaders.from_snipmate').lazy_load { paths = { '~/.config/nvim/lua/custom/mate_snippets' } }
+              require('luasnip.loaders.from_vscode').lazy_load {}
             end,
           },
         },
@@ -817,7 +820,7 @@ require('lazy').setup({
       incremental_selection = {
         enable = true,
         keymaps = {
-          init_selection = '<Leader>ss', -- set to `false` to disable one of the mappings
+          init_selection = '<leader>ss', -- set to `false` to disable one of the mappings
           node_incremental = '<Leader>si',
           scope_incremental = '<Leader>sc',
           node_decremental = '<Leader>sd',
@@ -835,7 +838,7 @@ require('lazy').setup({
       --
       --    - Incremental selection: Included, see `:help nvim-treesitter-incremental-selection-mod`
       --    - Show your current context: https://github.com/nvim-treesitter/nvim-treesitter-context
-      --    - Treesitter + textobjects: https://github.com/nvim-treesitter/nvim-treesitter-textobjects
+      -- - Treesitter + textobjects: https://github.com/nvim-treesitter/nvim-treesitter-textobjects
     end,
   },
 
